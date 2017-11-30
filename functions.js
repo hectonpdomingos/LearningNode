@@ -4,7 +4,7 @@ function myCosts(rent, education, food) {
     if (total > 2000) {
         console.log("Away to high to live, I need find another job!")
 
-    } else if (total < 1500) {
+    } else if (total < 1500 || total > 1400) {
         console.log("We are living on the edge")
     }
 }
