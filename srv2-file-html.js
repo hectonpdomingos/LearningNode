@@ -9,11 +9,12 @@ app.get('/', function (request, Response) {
     Response.sendFile(path.join(__dirname + '/index.html'));
 });
 
-
+//Response with HTML markup
 app.get('/about', (request, Response) => {
-    Response.send('About page');
+    Response.send('<h1>About page</h1>');
 });
 
+//redirecting to html page
 app.get('/readme', (request, Response) => {
     Response.sendFile(path.join(__dirname + '/readme.html'));
 });
@@ -32,4 +33,6 @@ app.get('/json', (request, Response) => {
     });
 });
 
-app.listen(5000);
+app.listen(5000, () => {
+    console.log('Server up and running on port 5000')
+});
